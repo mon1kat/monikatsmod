@@ -11,7 +11,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    public static final Item STUPID_WAND = regiterItem("stupid_wand", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Monikatsmod.MOD_ID,"stupid_wand")))));
+    public static final Item STUPID_WAND = regiterItem("stupid_wand", new Item(new Item.Settings().maxCount(1).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Monikatsmod.MOD_ID,"stupid_wand")))));
 
     private static Item regiterItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Monikatsmod.MOD_ID, name), item);

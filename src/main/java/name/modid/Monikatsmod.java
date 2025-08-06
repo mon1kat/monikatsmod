@@ -1,5 +1,6 @@
 package name.modid;
 
+import name.modid.Block.ModBlocks;
 import name.modid.Item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -21,5 +22,6 @@ public class Monikatsmod implements ModInitializer {
 		// Proceed with mild caution.
 		LOGGER.info("Fear for idfk what I'm doing :3");
         ModItems.registerModItems();
+        ModBlocks.registerModBlocks();
 	}
 }
