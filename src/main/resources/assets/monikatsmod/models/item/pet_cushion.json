@@ -1,3 +1,6 @@
 {
-  "parent": "Monikatsmod:block/pet_cushion"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "monikatsmod:item/pet_cushion_flat"
+  }
 }

@@ -19,6 +19,11 @@ import net.minecraft.util.Identifier;
 public class ModBlocks {
     public static final Block PET_CUSHION = registerBlock("pet_cushion",
             PetCushionBlock.Settings.create()
+                    .dynamicBounds()
+                    .burnable()
+                    .nonOpaque()
+                    .jumpVelocityMultiplier(2)
+                    .breakInstantly()
                     .strength(4f)
                     .requiresTool()
                     .sounds(BlockSoundGroup.WOOL));
