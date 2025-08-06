@@ -14,38 +14,30 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
-
-
 public class ModBlocks {
+
     public static final Block PET_CUSHION = registerBlock("pet_cushion",
-            PetCushionBlock.Settings.create()
+            new PetCushionBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Monikatsmod.MOD_ID, "pet_cushion")))
+                    .sounds(BlockSoundGroup.WOOL)
                     .dynamicBounds()
-                    .burnable()
                     .nonOpaque()
-                    .jumpVelocityMultiplier(2)
-                    .breakInstantly()
-                    .strength(4f)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.WOOL));
+                    .breakInstantly()));
 
     // Enables the registration of block items
     private static void registerBlockItem(String name, Block block) {
-        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Monikatsmod.MOD_ID, name));
-        BlockItem item = new BlockItem(block, new Item.Settings().registryKey(key));
-        Registry.register(Registries.ITEM, key, item);
+        Registry.register(Registries.ITEM, Identifier.of(Monikatsmod.MOD_ID, "pet_cushion"),
+                new BlockItem(block, new Item.Settings()
+                        .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Monikatsmod.MOD_ID, name))).useBlockPrefixedTranslationKey()));
     }
     // Enables the registration of blocks
-    private static Block registerBlock(String name, AbstractBlock.Settings blockSettings) {
-        RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Monikatsmod.MOD_ID, name));
-        Block block = new Block(blockSettings.registryKey(key));
+    private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
-        return Registry.register(Registries.BLOCK, key, block);
+        return Registry.register(Registries.BLOCK, Identifier.of(Monikatsmod.MOD_ID, name), block);
     }
-    
+
     //spits out a message to the log
     public static void registerModBlocks(){
         Monikatsmod.LOGGER.info(Monikatsmod.MOD_ID + "registering new blocks");
-
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(ModBlocks.PET_CUSHION));
     }
 }
