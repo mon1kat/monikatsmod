@@ -15,9 +15,10 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 
+
 public class ModBlocks {
     public static final Block PET_CUSHION = registerBlock("pet_cushion",
-            AbstractBlock.Settings.create()
+            PetCushionBlock.Settings.create()
                     .strength(4f)
                     .requiresTool()
                     .sounds(BlockSoundGroup.WOOL));
