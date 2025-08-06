@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "monikatsmod",
+	"version": "0.420",
+	"name": "monikatsmod",
+	"description": "Messing around with stuffs",
+	"authors": [
+		"Monikat, the all-unknowing"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/monikatsmod/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+			"name.modid.Monikatsmod"
+		],
+		"client": [
+			"name.modid.MonikatsmodClient"
+		]
+	},
+	"mixins": [
+		"monikatsmod.mixins.json",
+		{
+			"config": "monikatsmod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.8",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
