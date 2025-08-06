@@ -1,5 +1,6 @@
 package name.modid;
 
+import name.modid.Item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -19,5 +20,6 @@ public class Monikatsmod implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 		LOGGER.info("Fear for idfk what I'm doing :3");
+        ModItems.registerModItems();
 	}
 }
