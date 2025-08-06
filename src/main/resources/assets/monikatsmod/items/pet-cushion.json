@@ -1,6 +1,6 @@
 {
   "model": {
-    "type": "minecraft:model",
-    "model": "Monikatsmod.item/pet_cushion"
+    "type" : "minecraft:model",
+    "model": "monikatsmod:item/pet_cushion"
   }
 }

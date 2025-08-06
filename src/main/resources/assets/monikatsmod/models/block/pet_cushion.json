@@ -1,11 +1,9 @@
 {
-	"format_version": "1.21.6",
-	"credit": "Made with Blockbench",
-	"texture_size": [32, 32],
+    "texture_size": [32, 32],
 	"textures": {
-		"1": "block/pet_cushion_base",
-		"2": "block/pet_cushion_top",
-		"particle": "block/pet_cushion_top"
+		"1": "monikatsmod:block/pet_cushion_base",
+		"2": "monikatsmod:block/pet_cushion_top",
+		"particle": "monikatsmod:block/pet_cushion_top"
 	},
 	"elements": [
 		{

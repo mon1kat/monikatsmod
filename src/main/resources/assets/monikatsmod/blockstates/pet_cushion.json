@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "Monikatsmod:block/pet_cushion"
+      "model": "monikatsmod:block/pet_cushion"
     }
   }
 }
